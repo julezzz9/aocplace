@@ -6,35 +6,108 @@
     <title>aocplace.io</title>
 
     <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+    
         body {
             background-color: black;
         }
 
         .main {
-            background-color: white;
+            background-color: rgb(0, 0, 0);
             border-radius: 25px;
         }
+
+        .glow {
+        color: #fff;
+        text-align: center;
+        -webkit-animation: glow 1s ease-in-out infinite alternate;
+        -moz-animation: glow 1s ease-in-out infinite alternate;
+        animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes glow {
+        from {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px #a7a7a7, 0 0 50px #7e7e7e, 0 0 60px #858585, 0 0 70px #636262;
+        }
+        to {
+            text-shadow: 0 0 20px #fff, 0 0 30px #7a7879, 0 0 40px #8a8989, 0 0 50px #818181, 0 0 60px #7c7c7c, 0 0 70px #686868, 0 0 80px #cccccc;
+        }
+        }
+
+        @-moz-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px #a7a7a7, 0 0 50px #7e7e7e, 0 0 60px #858585, 0 0 70px #636262;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #7a7879, 0 0 40px #8a8989, 0 0 50px #818181, 0 0 60px #7c7c7c, 0 0 70px #686868, 0 0 80px #cccccc;
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px #a7a7a7, 0 0 50px #7e7e7e, 0 0 60px #858585, 0 0 70px #636262;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #7a7879, 0 0 40px #8a8989, 0 0 50px #818181, 0 0 60px #7c7c7c, 0 0 70px #686868, 0 0 80px #cccccc;
+            }
+        }
+
+        .loginbutton {
+            border-radius: 25px;
+            
+        }
+
+        .loginbutton {
+            border-radius: 25px;
+            background-color: rgb(95, 95, 224);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-family: silkscreen;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        .loginbutton:hover {
+            background-color: rgb(85, 85, 191);
+
+
+        
+
+
+
     </style>
 </head>
 <body>
 
-    <div class="main" style="border: solid 6px rgb(95, 95, 224); margin-left: 30%; margin-right: 30%; margin-top: 10%;">
+    <div class="main" style="border: solid 6px rgb(95, 95, 224); margin-left: 25%; margin-right: 25%; margin-top: 40px;">
 
         <div style="display: inline; text-align: center; padding: 10px;">
             <center>
             <img src="https://pixelplace.io/img/pixelplace-io-logo-tiny.png">
-            <h1 style="margin: 1px;">AOCplace</h1>
-            <h3 style="margin: 1px;">Welcome!</h3>
-            <p style="margin: 1px;">Pixelplace.io clone for AOC. Developed by AlchemillaOtherworld</p>
+            <h1 style="margin: 1px; font-family: silkscreen;" class="glow">AOCplace.io</h1>
+            <h3 style="margin: 1px; color: white;"">Welcome!</h3>
+            <p style="margin: 1px; color: white;">Pixelplace.io clone for AOC. Developed by AlchemillaOtherworld</p>
         
             <br>
 
-            <input type="button" onclick="location.href='discord.html';" value="Login with Discord" />
+            <input class="loginbutton" type="button" onclick="location.href='discord.html';" value="Login with Discord" />
+            <!--<button type="loginbutton" onclick="location.href='discord.html';" value="Login with Discord"><span class="glowing-txt">Login with Discord</span></button>-->
         </div>
         </center>
 
     </div>
 
+    <center>
+    <img src="europe.png" style="height: auto; width: 50%; padding-top: 40px; opacity: 0.2;">
+    <p style="color:white; opacity: 0.2; margin: 1px;">©2024 AlchemillaOtherworld</p>
+    <p style="color:white; margin: 1px;" class="glow">long live aoc</p>
+    </center>
 
 
 
