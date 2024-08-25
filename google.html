@@ -86,7 +86,9 @@ body {
     transition: 0.5s;
 }
 
-.box .inputBox {
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value=""]) ~ label {
     top: -1.125rem;
     left: 10px;
     color: #1a73e8;
@@ -159,7 +161,7 @@ footer a {
     <p style="justify-content: left; text-align: left;">Use your Google Account</p>
     <form>
         <div class="inputBox">
-          <input type="email" name="email" required onkeyup="this.setAttribute('value', this.value);"  value="">
+          <input type="text" name="email" required onkeyup="this.setAttribute('value', this.value);"  value="">
           <label>Email or phone</label>
           <p class="forgot" style="margin: 2px; justify-content: left; text-align: left; padding: 0px; color: #1a73e8; font-weight: 700; font-size: smaller;">Forgot email?</p>
         </div>
